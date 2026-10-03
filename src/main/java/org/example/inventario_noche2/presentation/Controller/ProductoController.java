@@ -23,7 +23,7 @@ public class ProductoController {
     }
     @GetMapping
     public Optional<Producto> findById(@PathVariable long id){
-        return productoService.findById();
+        return productoService.findById(id);
     }
 
     @PostMapping
@@ -32,13 +32,13 @@ public class ProductoController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(PathVariable long id){
+    public void delete(@PathVariable long id){
         productoService.delete(id);
 
     }
 
     @PutMapping
-    public void update(PathVariable long id, @RequestBody Producto producto){
+    public void update(@PathVariable long id, @RequestBody Producto producto){
         productoService.update(producto);
     }
 

@@ -16,4 +16,4 @@ spring:
     properties:
      jpa:
        hibernate:
-         format_sql: true
+          format_sql: true

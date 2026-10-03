@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("api/movimientos")
 public class MovimientoController {
     private final MovimientoService movimientoService;
 
@@ -34,7 +35,7 @@ public class MovimientoController {
         movimientoService.save(movimiento);
     }
     @DeleteMapping("/{id}")
-    public void delete(PathVariable Long id){
+    public void delete(@PathVariable Long id){
         movimientoService.delete(id);
 
     }
