@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: inventario_noche2
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=inventario_noche;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: TU_CLAVE
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
