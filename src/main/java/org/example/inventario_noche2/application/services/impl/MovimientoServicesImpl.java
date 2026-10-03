@@ -3,10 +3,12 @@ package org.example.inventario_noche2.application.services.impl;
 import org.example.inventario_noche2.application.services.MovimientoService;
 import org.example.inventario_noche2.domain.model.Movimiento;
 import org.example.inventario_noche2.infraestructura.repository.MovimientoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MovimientoServicesImpl implements MovimientoService {
 
     private final MovimientoRepository movimientoRepository;

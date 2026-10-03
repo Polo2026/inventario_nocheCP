@@ -4,10 +4,12 @@ import org.example.inventario_noche2.application.services.MovimientoService;
 import org.example.inventario_noche2.application.services.ProductoService;
 import org.example.inventario_noche2.domain.model.Producto;
 import org.example.inventario_noche2.infraestructura.repository.ProductoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ProductoServiceImpl implements ProductoService {
 
     private final ProductoRepository productoRepository;
@@ -37,6 +39,7 @@ public class ProductoServiceImpl implements ProductoService {
         productoRepository.deleteById(id);
 
     }
+
 
 
     @Override
