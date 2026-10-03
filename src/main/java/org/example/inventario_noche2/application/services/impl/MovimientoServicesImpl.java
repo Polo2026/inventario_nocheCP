@@ -1,5 +1,6 @@
-package org.example.inventario_noche2.application.services;
+package org.example.inventario_noche2.application.services.impl;
 
+import org.example.inventario_noche2.application.services.MovimientoService;
 import org.example.inventario_noche2.domain.model.Movimiento;
 import org.example.inventario_noche2.infraestructura.repository.MovimientoRepository;
 
@@ -38,6 +39,8 @@ public class MovimientoServicesImpl implements MovimientoService {
 
     @Override
     public void update(Movimiento movimiento) {
+        movimientoRepository.save(movimiento);
+
 
 
     }
