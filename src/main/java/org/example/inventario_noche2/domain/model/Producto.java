@@ -1,13 +1,30 @@
 package org.example.inventario_noche2.domain.model;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+
 import java.math.BigDecimal;
+
+@Entity
+@Table(name = "productos")
 
 public class Producto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id",nullable = false)
     private Long id;
+
+    @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
+
+    @Column(name = "descripcion", length = 255)
     private String descripcion;
+
+    @Column(name = "precio", nullable = false)
     private BigDecimal precio;
+
+    @Column(name = "stock",nullable = false)
     private Integer stock;
 
     public Producto(){

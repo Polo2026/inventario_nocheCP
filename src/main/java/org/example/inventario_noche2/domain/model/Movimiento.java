@@ -1,9 +1,25 @@
 package org.example.inventario_noche2.domain.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "movimientos")
+
 public class Movimiento {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id",nullable = false)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "producto_id", nullable = false)
     private Producto producto;
+
+    @Column(name = "cantidad", nullable = false)
     private Integer cantidad;
+
+    @Column (name = "tipo", nullable = false)
     private TipoMovimiento tipo;
 
     public Movimiento(){
